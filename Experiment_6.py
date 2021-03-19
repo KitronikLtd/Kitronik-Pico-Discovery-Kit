@@ -22,23 +22,23 @@ Beeping = False
 def Beep():
     global Beeping
     OnTime = 50
-    print (“Start Beeping Thread”)
+    print ("Start Beeping Thread")
     while Beeping:
         Buzzer.duty_u16(32767)
         utime.sleep_ms(OnTime)
         Buzzer.duty_u16(0)
         utime.sleep_ms(1000-OnTime)
-    print(“End Beeping Thread”)
+    print("End Beeping Thread")
    
 def ButtonAIRQHandler(pin):
     global Beeping
     if Beeping == False:
-        print (“Start Beep”)
+        print ("Start Beep")
         Beeping = True
         _thread.start_new_thread(Beep,())
     else:
         Beeping = False  #this causes the thread to exit
-        print(“Stop Beep”)
+        print("Stop Beep")
 
 #setup the IRQ and hook it to the handler
 ButtonA.irq(trigger = machine.Pin.IRQ_RISING, handler =  ButtonAIRQHandler)   
