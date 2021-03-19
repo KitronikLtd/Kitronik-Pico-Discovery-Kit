@@ -30,13 +30,13 @@ def PedestrianCross():
     PedestrianGreen(1)
     PedestrianWait(0)
     OnTime = 50
-    print (“Beeping”)
+    print ("Beeping")
     for Beeping in range (10):
         Buzzer.duty_u16(32767)
         utime.sleep_ms(OnTime)
         Buzzer.duty_u16(0)
         utime.sleep_ms(1000-OnTime)
-    print(“End Beep Thread”)
+    print("End Beep Thread")
     PedestrianRed(1)
     PedestrianGreen(0)
     CrossRequested = False
@@ -49,7 +49,7 @@ def PedestrianCross():
 def ButtonIRQHandler(pin):
     global CrossRequested
     if CrossRequested == False:
-        print (“Button Pressed”)
+        print ("Button Pressed")
         CrossRequested = True
         PedestrianWait.value(1) #Indicate to wait.
 
