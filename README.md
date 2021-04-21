@@ -1,5 +1,5 @@
 # Kitronik-Pico-Discovery-Kit
-Code examples for the Kitronik Pico Discovery Kit - Available at www.kitonik.co.uk/5325
+Code examples for the Kitronik Pico Discovery Kit - Available at www.kitronik.co.uk/5325
 
 The Raspberry Pi Pico is a tiny dual core ARM based microcontroller. 
 More information on the Pico can be found on the Pi website:
