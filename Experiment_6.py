@@ -14,6 +14,7 @@ Green = machine.Pin(12,machine.Pin.OUT)
 Buzzer = machine.PWM(machine.Pin(15)) 
 Buzzer.duty_u16(0) #Start with the buzzer off
 Frequency = 1000  #set a frequency of 1 Khz
+Buzzer.freq(Frequency) #apply frequency to start process
 
 #Control Variable 
 Beeping = False
